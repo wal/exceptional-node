@@ -9,6 +9,7 @@ To use Exceptional for node.js you must have an account at <http://getexceptiona
 ## Installation
 
 Include the exceptional.js file in your application, and set your Exceptional API-KEY
+
 <pre>
  var Exceptional = require(./'exceptional');
 
@@ -16,27 +17,32 @@ Include the exceptional.js file in your application, and set your Exceptional AP
  </pre>
 
 
- ## Usage
-
+## Usage
 There a are multiple ways you can use exceptional with your node.js app.
 
-1. The process.uncaughtException event can be used to catch exceptions that bubble all the way up to the event loop.
+* The process.uncaughtException event can be used to catch exceptions that bubble all the way up to the event loop.
+
 <pre>
-process.addListener('uncaughtException', function(err) {
-  Exceptional.handle(err);
-});
+  process.addListener('uncaughtException', function(err) {
+    Exceptional.handle(err);
+  });
 </pre>
 
-2. You can sent exception data to exceptional from inside your own try/catch blocks
+* You can sent exception data to exceptional from inside your own try/catch blocks
 <pre>
-try {
+  try {
 
-  // Your Code
+    // Your Code
 
-} catch(error) {
-  // Your own error processing
-  Exceptional.handle(error);
-}
+  } catch(error) {
+    // Your own error processing
+    Exceptional.handle(error);
+  }
 </pre>
+
+## Example
+
+Check out the small example in examples/demo.js
+
 
 Copyright © 2008, 2010 Contrast.
