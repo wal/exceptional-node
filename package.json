@@ -4,7 +4,7 @@
   "homepage"     : "http://getexceptional.com",
   "author"       : "Wal McConnell <support@getexceptional.com>",
   "contributors" : [
-    "Alex Wolfe <wal@contrast.ie>"
+    "Wal McConnell <wal@contrast.ie>"
   ],
   "repository" : {
     "type" : "git",
@@ -24,3 +24,4 @@
     }
   ]
 }
+
